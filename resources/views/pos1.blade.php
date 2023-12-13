@@ -38,6 +38,12 @@
 			<div class="col-md-auto">
 				<img src="{{ asset('img/plnip.png') }}" style="width: 150px" alt="">
 			</div>
+			<div class="col-md-auto">
+				<img src="{{ asset('img/its.png') }}" style="width: 100px" alt="">
+			</div>
+			<div class="col-md-auto">
+				<img src="{{ asset('img/cogindo.png') }}" style="width: 150px" alt="">
+			</div>
 		</div>
 	</div>
 	
@@ -121,17 +127,7 @@
 				</div>
 			</div>
 		</div>
-		<!--
-		<div class="container" style="margin-top: 40px">
-			<div class="row justify-content-start">
-				<div class="col-md-auto">
-					<img src="{{ asset('img/its.png') }}" style="width: 100px" alt="">
-				</div>
-				<div class="col-md-auto">
-					<img src="{{ asset('img/cogindo.png') }}" style="width: 150px" alt="">
-				</div>
-			</div>
-		</div> -->
+		
 		</div>
 	</div>
 
