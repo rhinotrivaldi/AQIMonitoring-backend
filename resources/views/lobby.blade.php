@@ -37,10 +37,10 @@
 			<img src="{{ asset('img/plnip.png') }}" style="width: 150px" alt="">
 		</div>
 		<div class="col-md-auto pt-4 d-flex align-items-center justify-content-center">
-			<img src="{{ asset('img/cogindo.png') }}" style="width: 150px" alt="">
+			<img src="{{ asset('img/cogindo.png') }}" style="width: 100px" alt="">
 		</div>
 		<div class="col-md-auto pt-4 d-flex align-items-center justify-content-center">
-			<img src="{{ asset('img/its.png') }}" style="width: 100px" alt="">
+			<img src="{{ asset('img/its.png') }}" style="width: 80px" alt="">
 		</div>
 	</div>
 	
