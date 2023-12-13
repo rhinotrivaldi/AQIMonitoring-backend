@@ -30,20 +30,18 @@
 	<title>AQI - PLN Indonesia Power</title>
   </head>
   <body>
-	<div class="container" style="margin-top: 40px">
-		<div class="row justify-content-end">
-			<div class="col-md-auto">
-				<img src="{{ asset('img/bumn.svg') }}" style="width: 150px" alt="">
-			</div>
-			<div class="col-md-auto">
-				<img src="{{ asset('img/plnip.png') }}" style="width: 150px" alt="">
-			</div>
-			<div class="col-md-auto">
-				<img src="{{ asset('img/its.png') }}" style="width: 100px" alt="">
-			</div>
-			<div class="col-md-auto">
-				<img src="{{ asset('img/cogindo.png') }}" style="width: 150px" alt="">
-			</div>
+	<div class="row justify-content-end">
+		<div class="col-md-auto d-flex align-items-center justify-content-center">
+			<img src="{{ asset('img/bumn.svg') }}" style="width: 150px" alt="">
+		</div>
+		<div class="col-md-auto d-flex align-items-center justify-content-center">
+			<img src="{{ asset('img/plnip.png') }}" style="width: 150px" alt="">
+		</div>
+		<div class="col-md-auto d-flex align-items-center justify-content-center">
+			<img src="{{ asset('img/cogindo.png') }}" style="width: 150px" alt="">
+		</div>
+		<div class="col-md-auto d-flex align-items-center justify-content-center">
+			<img src="{{ asset('img/its.png') }}" style="width: 100px" alt="">
 		</div>
 	</div>
 	
