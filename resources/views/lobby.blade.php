@@ -120,7 +120,7 @@
 			</div>
             <div class="row">
 				<div class="col-md-12 mb-4">
-					<a href="/" class="btn btn-primary">
+					<a href="/" class="btn btn-secondary">
 						<i class="fas fa-arrow-left"></i> Kembali
 					</a>
 					<a href="/pos1" class="btn btn-primary">
