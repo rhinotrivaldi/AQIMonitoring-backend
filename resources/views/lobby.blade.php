@@ -123,6 +123,9 @@
 					<a href="/" class="btn btn-primary">
 						<i class="fas fa-arrow-left"></i> Kembali
 					</a>
+					<a href="/pos1" class="btn btn-primary">
+						<i class="fas fa-arrow-left"></i> Pos 1
+					</a>
 				</div>
 			</div>
 		</div>

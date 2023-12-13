@@ -124,6 +124,9 @@
 					<a href="/" class="btn btn-primary">
 						<i class="fas fa-arrow-left"></i> Kembali
 					</a>
+					<a href="/lobby" class="btn btn-primary">
+						<i class="fas fa-arrow-left"></i> Lobby Utama
+					</a>
 				</div>
 			</div>
 		</div>
