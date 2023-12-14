@@ -44,29 +44,31 @@ class SensorController extends Controller
 
         $validatedData = $request->validate([
             'temp' => 'required',
-            'temp_c' => 'required',
+            'temp_m' => 'required',
             'hum' => 'required',
             'co' => 'required',
             'so2' => 'required',
             'no2' => 'required',
             'pm01' => 'required',
             'pm25' => 'required',
-            'pm25_c' => 'required',
+            'pm25_m' => 'required',
             'pm10' => 'required',
-            'pm10_c' => 'required'
+            'pm10_m' => 'required'
         ]);
 
         $sensorData = [
             'location_id' => $locationId,
             'temp' => $validatedData['temp'],
-            'temp_c' => $validatedData['temp_c'],
+            'temp_m' => $validatedData['temp_c'],
             'hum' => $validatedData['hum'],
             'co' => $validatedData['co'],
             'so2' => $validatedData['so2'],
             'no2' => $validatedData['no2'],
             'pm01' => $validatedData['pm01'],
             'pm25' => $validatedData['pm25'],
+            'pm25_m' => $validatedData['pm25_m'],
             'pm10' => $validatedData['pm10'],
+            'pm10_m' => $validatedData['pm10_m'],
         ];
 
         Sensor::create($sensorData);

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('sensors', function (Blueprint $table) {
-            $table->double('temp_c')->nullable()->after('temp');
+            $table->double('temp_m')->nullable()->after('temp');
         });
     }
 

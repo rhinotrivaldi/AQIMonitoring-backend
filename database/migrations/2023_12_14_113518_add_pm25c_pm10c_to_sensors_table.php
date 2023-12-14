@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('sensors', function (Blueprint $table) {
-            $table->double('pm25_c')->nullable()->after('pm25');
-            $table->double('pm10_c')->nullable()->after('pm10');
+            $table->double('pm25_m')->nullable()->after('pm25');
+            $table->double('pm10_m')->nullable()->after('pm10');
         });
     }
 
