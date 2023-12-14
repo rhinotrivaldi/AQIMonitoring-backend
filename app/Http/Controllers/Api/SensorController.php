@@ -51,7 +51,9 @@ class SensorController extends Controller
             'no2' => 'required',
             'pm01' => 'required',
             'pm25' => 'required',
+            'pm25_c' => 'required',
             'pm10' => 'required',
+            'pm10_c' => 'required'
         ]);
 
         $sensorData = [

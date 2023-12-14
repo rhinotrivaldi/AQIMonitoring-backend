@@ -21,7 +21,9 @@ class Sensor extends Model
         'pm01',
         'pm25',
         'pm10',
-        'temp_c'
+        'temp_c',
+        'pm25_c',
+        'pm10_c'
     ];
 
     public function location() {
