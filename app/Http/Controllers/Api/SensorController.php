@@ -44,6 +44,7 @@ class SensorController extends Controller
 
         $validatedData = $request->validate([
             'temp' => 'required',
+            'temp_c' => 'required',
             'hum' => 'required',
             'co' => 'required',
             'so2' => 'required',
@@ -56,6 +57,7 @@ class SensorController extends Controller
         $sensorData = [
             'location_id' => $locationId,
             'temp' => $validatedData['temp'],
+            'temp_c' => $validatedData['temp_c'],
             'hum' => $validatedData['hum'],
             'co' => $validatedData['co'],
             'so2' => $validatedData['so2'],
