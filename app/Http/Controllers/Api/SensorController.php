@@ -59,7 +59,7 @@ class SensorController extends Controller
         $sensorData = [
             'location_id' => $locationId,
             'temp' => $validatedData['temp'],
-            'temp_m' => $validatedData['temp_c'],
+            'temp_m' => $validatedData['temp_m'],
             'hum' => $validatedData['hum'],
             'co' => $validatedData['co'],
             'so2' => $validatedData['so2'],
@@ -75,7 +75,6 @@ class SensorController extends Controller
 
         return response()->json(['success' => 'Sensor data stored successfully.'], 200);
     }
-
 
     /**
      * Display the specified resource.
@@ -94,10 +93,49 @@ class SensorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        //
+    public function update(Request $request)
+{
+    $locationId = $request->input('locationId');
+    $location = Location::find($locationId);
+
+    if ($location) {
+        $token = $request->input('token');
+
+        if ($location->tokenhardware->token !== $token) {
+            return response()->json(['error' => 'Invalid token for the specified location.'], 403);
+        }
     }
+
+    $validatedData = $request->validate([
+        'temp' => 'required',
+        'temp_m' => 'required',
+        'hum' => 'required',
+        'co' => 'nullable',
+        'so2' => 'required',
+        'no2' => 'required',
+        'pm01' => 'required',
+        'pm25' => 'required',
+        'pm25_m' => 'required',
+        'pm10' => 'required',
+        'pm10_m' => 'required'
+    ]);
+
+    $latestSensor = Sensor::latest('id')->first();
+
+    if ($latestSensor) {
+        $updateData = array_filter($validatedData, function ($value) {
+            return $value !== null;
+        });
+
+        $latestSensor->update($updateData);
+
+        return response()->json(['success' => 'Sensor data updated successfully.'], 200);
+    } else {
+        return response()->json(['error' => 'No sensor data found.'], 404);
+    }
+}
+
+
 
     /**
      * Remove the specified resource from storage.

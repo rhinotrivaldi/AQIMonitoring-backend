@@ -20,5 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/send-data-sensor', [SensorController::class, 'store']);
+Route::post('/update-data-sensor', [SensorController::class, 'update']);
 // Route::get('/sensor', [SensorController::class,'index']);
 // Route::get('/sensor/{id}', [SensorController::class,'show']);
