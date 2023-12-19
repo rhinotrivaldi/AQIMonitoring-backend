@@ -32,9 +32,9 @@ class SensorController extends Controller
         $locationId = $request->input('locationId');
         $location = Location::find($locationId);
 
-        // if (!$location) {
-        //     return response()->json(['error' => 'Invalid LocationId'], 404);
-        // }
+        if (!$location) {
+            return response()->json(['error' => 'Invalid LocationId'], 404);
+        }
 
         $token = $request->input('token');
 
